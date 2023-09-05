@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What Suits You</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <h2>WHAT SUITS YOU</h2>
+            <div class="form-container">
+                <form method="post">
+                    <div class="form-field">
+                        <label for="height">HEIGHT:</label>
+                        <input type="text" name="height" id="height">
+                    </div>
+                    <div class="form-field">
+                        <label for="age">AGE:</label>
+                        <input type="text" name="age" id="age">
+                    </div>
+                    <div class="form-field">
+                        <label for="gender">GENDER:</label>
+                        <input type="text" name="gender" id="gender">
+                    </div>
+                    <div class="form-field">
+                        <label for="weight">WEIGHT:</label>
+                        <input type="text" name="weight" id="weight">
+                    </div>
+                    <div class="form-field">
+                        <label for="preferred_style">STYLE:</label>
+                        <input type="text" name="preferred_style" id="preferred_style">
+                    </div>
+                    <div class="form-field">
+                        <label for="price_range">PRICE:</label>
+                        <input type="text" name="price_range" id="price_range">
+                    </div>
+                    <input type="submit" class="submit-button" name="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

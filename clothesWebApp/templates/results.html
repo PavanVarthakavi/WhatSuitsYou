@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result_style.css') }}">
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <h1>Your Recommended Styles:</h1>
+            <div class="form-container">
+                <ul>
+                    {% for style in recommended_styles %}
+                        <li>{{ style }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Recommended Sites:</h2>
+                <ul>
+                    {% for site in recommended_sites %}
+                        <li><a href="{{ site }}">{{ site }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Style Images:</h2>
+                {% for style, images in images_for_styles.items() %}
+                    <h3>Images for {{ style }}</h3>
+                    <ul>
+                        {% for image in images %}
+                            <li><img src="{{ image }}" alt="{{ style }}" width="200"></li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+            <!-- Insert the well-formatted paragraph for chatbot preferences here. -->
+            <div class="form-container">
+                <p>Given the user's age, height, weight, and preference for casual wear within a budget of $50, here are a few style recommendations. For a flattering fit, consider slim-fit jeans in darker colors. T-shirts in solid colors, such as white, black, or gray, offer a casual yet effortlessly cool look. A lightweight hoodie or sweater is excellent for layering, and neutral shades allow for mixing and matching. For footwear, basic white or black sneakers pair well with any casual attire. Remember to prioritize quality and versatility, and don't forget to take advantage of sales to maximize your budget. Always aim to dress in a way that reflects your personal style and comfort.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
